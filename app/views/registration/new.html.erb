@@ -1,0 +1,31 @@
+<h1>Sign up</h1>
+
+<%= form_with model: @user, url: signup_path do |form| %>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password"%>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "confirm password" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :first_name %>
+        <%= form.text_field :first_name, class: "form-control", placeholder: "Steve" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :last_name %>
+        <%= form.text_field :last_name, class: "form-control", placeholder: "Jobs" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :username %>
+        <%= form.text_field :username, class: "form-control", placeholder: "username" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Sign up", class: "btn btn-primary"%>
+    </div>
+<% end %>
